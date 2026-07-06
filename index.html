@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>💰 Personal Finance Tracker</h1>
+
+        <div class="budget-section">
+            <input type="number" id="budgetInput" placeholder="Enter Monthly Budget">
+            <button onclick="setBudget()">Set Budget</button>
+        </div>
+
+        <div class="expense-form">
+            <input type="text" id="expenseName" placeholder="Expense Name">
+
+            <input type="number" id="expenseAmount" placeholder="Amount">
+
+            <select id="expenseCategory">
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Entertainment</option>
+            </select>
+
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <div class="summary">
+            <h3>Budget: ₹<span id="budget">0</span></h3>
+            <h3>Total Expenses: ₹<span id="totalExpense">0</span></h3>
+            <h3>Remaining: ₹<span id="remaining">0</span></h3>
+        </div>
+
+        <h2>Expenses</h2>
+
+        <ul id="expenseList"></ul>
+
+        <div class="chart-container">
+            <canvas id="expenseChart"></canvas>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
